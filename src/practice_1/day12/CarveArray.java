@@ -1,6 +1,7 @@
 package practice_1.day12;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class CarveArray {
     public static void main(String[] args) {
@@ -15,16 +16,13 @@ public class CarveArray {
     }
 
     static int[] solution(int[] arr, int[] query) {
-        for (int i : query) {
-            if (i % 2 == 0) {
-                arr = Arrays.copyOfRange(arr, 0, i + 1);
-            } else {
-                arr = Arrays.copyOfRange(arr, i, arr.length);
+        for(int i = 0; i < query.length; i++){
+            if(i % 2 == 0){
+                arr = Arrays.copyOfRange(arr, 0, query[i] + 1);
+            }else{
+                arr = Arrays.copyOfRange(arr, query[i], arr.length);
             }
-            System.out.println(Arrays.toString(arr));
         }
         return arr;
     }
-
-
 }
