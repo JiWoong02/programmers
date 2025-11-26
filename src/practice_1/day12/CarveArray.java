@@ -1,7 +1,6 @@
 package practice_1.day12;
 
 import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class CarveArray {
     public static void main(String[] args) {
